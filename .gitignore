@@ -4,3 +4,6 @@
 .pub/
 build/
 pubspec.lock
+.idea/
+examples/flutter_example/.idea/
+examples/flutter_example/.metadata
