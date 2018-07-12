@@ -6,4 +6,4 @@ build/
 pubspec.lock
 .idea/
 examples/flutter_example/.idea/
-examples/flutter_example/.metadata
+examples/flutter_example/.metadata 
