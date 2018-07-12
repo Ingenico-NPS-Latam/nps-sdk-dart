@@ -1,3 +1,6 @@
+## 0.0.7
+- Changed xml's library version
+
 ## 0.0.6
 - Refactored code
 

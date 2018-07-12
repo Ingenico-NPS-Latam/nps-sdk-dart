@@ -1,14 +1,14 @@
 # Dart SDK (Under Development)
 
 ## Availability
-Supports Dart from 1.2 to 2.0
+Supports Dart from 1.2 to above
 
 ## How to install
 
 Add the following line in dependencies in your pubspec.yaml file:
 ```
 dependencies:
-  nps_sdk: "^0.0.6"
+  nps_sdk: "^0.0.7"
 ```
 
 Then open a terminal in your project and execute the following command:
