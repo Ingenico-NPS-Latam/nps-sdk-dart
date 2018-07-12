@@ -1,6 +1,6 @@
 name: nps_sdk
 description: API with which you can interact with NPS's platform.
-version: 0.0.3
+version: 0.0.6
 author: IngenicoNpsLatam <development@sub1.com.ar>
 homepage: https://github.com/Ingenico-NPS-Latam/nps-sdk-dart
 documentation: https://developers.nps.com.ar/

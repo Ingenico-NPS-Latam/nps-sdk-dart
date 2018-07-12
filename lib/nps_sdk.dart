@@ -2,6 +2,7 @@ library nps_sdk;
 
 import 'src/constants.dart' as constants;
 import 'src/services.dart' as services;
+import 'src/utilities.dart' as utilities;
 import 'src/soap_client.dart';
 
 export 'src/constants.dart';
@@ -11,13 +12,12 @@ export 'src/services.dart';
 export 'src/utilities.dart';
 export 'src/soap_client.dart';
 
-
 class Nps {
   String _environment;
   bool _debug = false;
 
-  final sandbox_host = "www.sandbox.nps.com.ar";
-  final staging_host = "www.implementacion.nps.com.ar";
+  final sandbox_host = "sandbox.nps.com.ar";
+  final staging_host = "implementacion.nps.com.ar";
   final production_host = "services2.nps.com.ar";
 
   Nps(this._environment);
@@ -48,7 +48,7 @@ class Nps {
     return response;
   }
 
-  getInstallmentOptions(nps, params) {
+  getInstallmentsOptions(nps, params) {
     var response = sendRequest(nps, params, services.getInstallmentsOptions);
     return response;
   }
@@ -61,6 +61,26 @@ class Nps {
   retrievePaymentMethodToken(nps, params) {
     var response = sendRequest(nps, params, services.retrievePaymentMethodToken);
     return response;
+  }
+
+  bool validateCardNumber(String cardNumber) => utilities.hasCorrectSize(cardNumber, maxSize: 24, minSize: 9) && utilities.isValidLuhn(cardNumber);
+
+  bool validateCardHolderName(String holderName) => utilities.hasCorrectSize(holderName, maxSize: 27, minSize: 2);
+
+  bool validateCardSecurityCode(String securityCode) => utilities.hasCorrectSize(securityCode, maxSize: 4, minSize: 3);
+
+  bool validateCardExpDate(int year, {int month}) {
+    int day = 1;
+    if (month < 1 || month > 12 || year < 1) {
+      return false;
+    }
+
+    year += year < 100 ? 2000 : 0;
+
+    DateTime today = new DateTime.now();
+    DateTime cardExpDate = DateTime.parse(year.toString() + "0" + month.toString() + "0" + day.toString());
+    Duration difference = cardExpDate.difference(today);
+    return difference.inDays > 0;
   }
 }
 

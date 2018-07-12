@@ -5,26 +5,26 @@ void build(builder, key, value) {
     if(value is List) {
       buildList(builder, key, value);
     } else if (value is Map) {
-      buildMap(builder, key, value);
+      buildMap(builder, value);
     } else {
-      buildString(builder, key, value);
+      buildString(builder, value);
     }
   });
 }
 
-void buildList(builder, key, value) {
-  builder.element(key, nest: () {
-      for (var element in key) {
+void buildList(builder, list, value) {
+  builder.element(list, nest: () {
+      for (var element in list) {
         element.forEach((key, value) => build(builder, key, value));
       }
   });
 }
 
-void buildMap(builder, key, value) {
-  value.forEach((intern_key, intern_value) => build(builder, intern_key, intern_value));
+void buildMap(builder, dict) {
+  dict.forEach((key, value) => build(builder, key, value));
 }
 
-void buildString(builder, key, value) {
+void buildString(builder, value) {
   builder.attribute('xsi:type', 'string');
   builder.text(value);
 }
