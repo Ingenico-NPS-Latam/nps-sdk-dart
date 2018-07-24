@@ -1,3 +1,6 @@
+## 0.0.8
+- Added Flutter example 
+
 ## 0.0.7
 - Changed xml's library version
 
