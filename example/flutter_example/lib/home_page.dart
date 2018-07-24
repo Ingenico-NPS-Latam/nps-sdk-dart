@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:nps_sdk/nps_sdk.dart';
 
 class HomePage extends StatefulWidget {
@@ -105,47 +104,7 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
       ),
-      
     );
   }
 }
 
-
-/*
-new ListView(
-        children: <Widget>[
-          new Container(
-            margin: new EdgeInsets.only(top: 90.0),
-            child: Text("Estado del request:", style: _titleStyle, textAlign: TextAlign.center,),
-          ),
-          new Container(
-            margin: _textMargin,
-            child: Text(_responseMsg, style: _textStyle, textAlign: TextAlign.center,),
-          ),
-          new Container(
-            margin: new EdgeInsets.only(top: 40.0),
-            child: Text(_tokenLiteral, style: _titleStyle, textAlign: TextAlign.center,),
-          ),
-          new Container(
-            margin: _textMargin,
-            child: Text(_token, style: _textStyle, textAlign: TextAlign.center,),
-          ),
-          new Container(
-            margin: EdgeInsets.only(top: 120.0),
-            child: new Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                new Container(
-                  margin: new EdgeInsets.only(top: 10.0),
-                  child: new RaisedButton(
-                    child: new Text("Create Payment Method Token"),
-                    color: Colors.greenAccent,
-                    onPressed: _createPaymentMethodToken
-                  ) ,
-                )
-              ],
-            )
-          )
-        ],
-      )
-*/

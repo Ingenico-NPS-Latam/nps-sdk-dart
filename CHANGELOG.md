@@ -1,3 +1,6 @@
+## 0.0.9
+- Fixed pub warnings 
+
 ## 0.0.8
 - Added Flutter example 
 

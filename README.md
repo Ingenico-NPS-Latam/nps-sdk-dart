@@ -8,7 +8,7 @@ Supports Dart from 1.2 to above
 Add the following line in dependencies in your pubspec.yaml file:
 ```
 dependencies:
-  nps_sdk: "^0.0.8"
+  nps_sdk: "^0.0.9"
 ```
 
 Then open a terminal in your project and execute the following command:

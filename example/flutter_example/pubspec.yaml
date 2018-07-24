@@ -8,7 +8,7 @@ dependencies:
   cupertino_icons: ^0.1.2
 
 dev_dependencies:
-  nps_sdk: "^0.0.8"
+  nps_sdk: "^0.0.9"
   flutter_test:
     sdk: flutter
 
