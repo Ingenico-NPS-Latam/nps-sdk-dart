@@ -5,13 +5,13 @@ Supports Dart from 1.2 to above
 
 ## How to install
 
-Add the following line in dependencies in your pubspec.yaml file:
+Add the following line in dependencies in your pubspec.yaml file and save it:
 ```
 dependencies:
   nps_sdk: "^0.0.9"
 ```
 
-Then open a terminal in your project and execute the following command:
+If ```pub get``` wasn't automatically ejecuted, you can do it manually by opening a terminal in your project and executing the command:
 ```
 pub get
 ```
@@ -98,5 +98,5 @@ main(List<String> arguments) async {
 
 ## Flutter 
 
-This SDK can be imported in Flutter's projects. For a Flutter example, click [here](https://github.com/Ingenico-NPS-Latam/nps-sdk-dart/tree/master/examples/flutter_example).
+This SDK can be imported in Flutter's projects. For a Flutter example, click [here](https://github.com/Ingenico-NPS-Latam/nps-sdk-dart/tree/master/example/flutter_example).
 
