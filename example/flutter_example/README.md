@@ -4,15 +4,14 @@ A Flutter project which uses Nps' Dart SDK.
 
 ## Getting Started
 
-Add the following line in dev_dependencies in your pubspec.yaml file:
-
+Add the following line in dev_dependencies in your pubspec.yaml file and save it:
 ```dart
 dev_dependencies:
   nps_sdk: "^0.0.9"
 ```
-Then open a terminal in your project and execute the following command:
 
- ```dart
+If ```pub get``` wasn't automatically ejecuted, you can do it manually by opening a terminal in your project and executing the command:
+```dart
 pub get
 ```
 
