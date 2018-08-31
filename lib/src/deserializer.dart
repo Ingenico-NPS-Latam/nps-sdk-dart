@@ -8,7 +8,7 @@ Map toMap(httpResponse, methodResponse) {
 
   String json = myTransformer.toParker();
 
-  Map decoded_json = JSON.decode(json);
-
+  Map decoded_json = jsonDecode(json);
+  
   return decoded_json["SOAP-ENV:Envelope"]["SOAP-ENV:Body"][methodResponse]["Respuesta"];
 }

@@ -1,3 +1,6 @@
+## 1.0.0
+- Upgrade to Dart 2
+
 ## 0.0.9
 - Fixed pub warnings 
 
