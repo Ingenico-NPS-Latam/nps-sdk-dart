@@ -2,8 +2,9 @@
 .dart_tool/
 .packages
 .pub/
+.idea/
 build/
 pubspec.lock
-.idea/
 examples/flutter_example/.idea/
 examples/flutter_example/.metadata 
+local_test.dart
